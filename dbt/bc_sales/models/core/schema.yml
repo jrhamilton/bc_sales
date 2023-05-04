@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: country_facts
+--  - name: top_selling_artist_by_transactions_total_by_country
+--  - name: top_seller_by_usd_by_country
