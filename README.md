@@ -83,7 +83,7 @@ This project will answer the following questions:
 
     - name: country_code_ref
         * description: >
-            - A Reference to the RANGE_BUCKET id (cc_ref) as a lookup for country_code.
+            - A Reference for the RANGE_BUCKET id (cc_ref) as a lookup for country_code.
         * columns:
             - name: count
                 * The total count of sales in country.
