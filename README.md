@@ -14,7 +14,7 @@ This README is the updated version for bcsales. This should be easier to read. I
 Goals of the project are to find:
 - The total sales in each country.
 - The highest selling artist in each country.
-- Highest average sales per sale by artist in each country.
+- Highest average `amount_paid_usd` per sale by artist in each country.
 
 
 ### Answers
