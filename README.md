@@ -180,23 +180,23 @@ $ cd ~/bcsales
 $ tmux new -t bc
 ```
 This will start a Tmux session
-type `CTRL-B c`
-  - That is the key (CTRL) and the key (b) pressed at the same time, let go, then press the key (c)
-  - This will put you in another window.
-Now type `CTRL-B 0`
-  - This will take you back to previous window.
-  - At any time you can hit the Esc button to 'reset' if you think you messed up the key-combination.
-Now type `CTRL-B 1` to go back the newer window.
-`$ prefect orion start`
+* type `CTRL-B c`
+    - That is the key (CTRL) and the key (b) pressed at the same time, let go, then press the key (c)
+    - This will put you in another window.
+* Now type `CTRL-B 0`
+    - This will take you back to previous window.
+    - At any time you can hit the Esc button to 'reset' if you think you messed up the key-combination.
+* Now type `CTRL-B 1` to go back the newer window.
+    - `$ prefect orion start`
     - If you get an error: 'prefect not found': open another window:
-        - `CTRL-B c`
-        - Then run the command again: `$ prefect orion start`
-Now type `CTRL-B %`
-  - This will create a new pane in same window.
-  - This will be for your Prefect Agent.
-`$ prefect agent start -q default`
-Now type `CTRL-B c`
-  - This will execute Tmux to put you in a new Window.
+        * `CTRL-B c`
+        * Then run the command again: `$ prefect orion start`
+* Now type `CTRL-B %`
+    - This will create a new pane in same window.
+    - This will be for your Prefect Agent.
+* `$ prefect agent start -q default`
+* Now type `CTRL-B c`
+    - This will execute Tmux to put you in a new Window.
 
 
 
@@ -211,6 +211,7 @@ Unfortunately, I had Prefect turned off in my final push to Github before submit
 
 
 ## Build Program
+Back to Remote Instance..
 Execute the folowing commands
 ```
 $ cd ~/bcsales/terraform
