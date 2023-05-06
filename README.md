@@ -118,7 +118,7 @@ $ ssh-keygen
 
 2. In Google Cloud, go to 'META'
     - May need to search for meta (or ssh keys)
-    - Add your ssh public key (~/.ssh/id.rsa.pub) to the metadata page
+    - Add your ssh public key (~/.ssh/dtc_rsa.pub) to the metadata page
         * IMPORTANT: Make sure the key name you upload ends in '.pub'
 
 3. Create a Google Cloud Instance
