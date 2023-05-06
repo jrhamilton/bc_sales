@@ -84,7 +84,7 @@ In your local machine do the following (OR SKIP THIS AND USE A KEY YOU ALREADY H
 ```
 $ ssh-keygen
 ```
-    - When answering hte questions for location, answer with `~/.ssh/dtc`
+- When answering the questions for location, answer with `/home/<USER>/.ssh/dtc`
 
 2. In Google Cloud, go to 'META'
     - May need to search for meta (or ssh keys)
