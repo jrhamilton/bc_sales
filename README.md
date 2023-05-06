@@ -101,6 +101,7 @@ PySpark is used for transforming data.
 
 #### PySpark used above may have been unnecessary here for this small dataset but used for learning purposes.
 
+---
 
 ## Reproduce The Project
 1. Create identity key:
@@ -158,7 +159,6 @@ $ ssh dtc
 $ ssh <REMOTE-USERNAME>@X.X.X.X
 ```
 
-
 6. Then in the remote Google Cloud Instance execute the following commands:
 ```bash
 $ git clone https://github.com/jrhamilton/bcsales
@@ -181,6 +181,7 @@ $ bash bcsales/vm/SourceMe.sh
 
 #### We are done with Virtual Machine setup.
 
+---
 
 ## REBOOT
 From here, it is best just to reboot the instance and log back in to avoid any Environment issues.
@@ -189,6 +190,7 @@ From here, it is best just to reboot the instance and log back in to avoid any E
 - Log back in:
 `$ ssh dtc`
 
+---
 
 ### Start Tmux
 ```
@@ -224,7 +226,7 @@ ssh -L 4200:127.0.0.1:4200 dtc
 Now you can go to http://127.0.0.1:4200 to view the UI.
 Unfortunately, I had Prefect turned off in my final push to Github before submitting, so most Prefect items will not be used in this project.
 
-
+---
 
 ## Build Program
 Back to Remote Instance..
@@ -245,7 +247,6 @@ $ cd ~/bcsales
 $ bash run_program.sh
 ```
 
-
 ## Run DBT
 When the above program (run_program.sh) is done building, execute the folowing commands:
 ```
@@ -254,6 +255,8 @@ $ dbt deps
 $ dbt build
 $ dbt build -t prod
 ```
+
+---
 
 You can biuld from Looker Studio
 LINKS:
