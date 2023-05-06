@@ -114,7 +114,7 @@ $ ssh-keygen
 - WHEN ASKED THE FOLLWING QUESTION:
     * `Enter file in which to save the key (/home/<USER>/.ssh/id_rsa):`
 - ANSWER WITH:
-    * `/home/<USER>/.ssh/dtc`
+    * `/home/<USER>/.ssh/dtc_rsa`
 
 2. In Google Cloud, go to 'META'
     - May need to search for meta (or ssh keys)
