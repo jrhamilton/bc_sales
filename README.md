@@ -1,10 +1,17 @@
 # DataTalksClub - Data Engineering Project
 
+
 ## Bandcamp Sales
 This project is based on the 1 million Bandcamp sales dataset.
 
+
+## UPDATED README
+This README is updated version for bcsales. This should be easier to read. I didn't know that we could update README after submission until the deadline.
+
+
 ### Goal
 Goal of the project is to find the highest sales and highest average sales in each country.
+
 
 ### Answers
 This project will answer the following questions:
@@ -78,6 +85,7 @@ PySpark is used for transforming data.
 
 #### PySpark used above may have been unnecessary here for this small dataset but used for learning purposes.
 
+
 ## Reproduce The Project
 1. Create identity key:
 In your local machine do the following (OR SKIP THIS AND USE A KEY YOU ALREADY HAVE IF YOU PREFER)
@@ -133,30 +141,32 @@ $ ssh dtc
 ```
 $ ssh <REMOTE-USERNAME>@X.X.X.X
 ```
-Then in the remote Google Cloud Instance execute the following commands:
+
+
+6. Then in the remote Google Cloud Instance execute the following commands:
 ```bash
 $ git clone https://github.com/jrhamilton/bcsales
 $ bash bcsales/vm/SourceMe.sh
 ```
 
-6. Add your REMOTE INSTANCE key to Google Cloud that was made during the interactive prompts.
+7. Add your REMOTE INSTANCE key to Google Cloud that was made during the interactive prompts.
     - Just like you did with your local key earlier (If you followed that process)
     - In Google Cloud Console, search for 'metadata' or 'ssh keys'.
     - Add the key from your remote instance to the ssh key page.
     - `cat ~/.ssh/id_ed25519.pub`
     - Add the contents from the `cat` to the ssh key page.
 
-7. Now add your GOOGLE_APPLICATION_CREDENTIALS to your REMOTE machine.
+8. Now add your GOOGLE_APPLICATION_CREDENTIALS to your REMOTE machine.
     - Add the credentials to `$HOME/.creds/gcp/gac.json`
     - I like to use scp. From your local machine execute the following:
         `$ scp ~/<CREDENTIALS_LOCATION> gcp:~/.creds/gcp/gac.json`
     - For example, mine would be:
         `$ scp ~/.google_application_credentials.json gcp:~/.creds/gcp/gac.json`
 
-### We are done with Virtual Machine setup.
+#### We are done with Virtual Machine setup.
 
 
-### REBOOT
+## REBOOT
 From here, it is best just to reboot the instance and log back in to avoid any Environment issues.
 `$ sudo reboot`
 
@@ -189,6 +199,17 @@ Now type `CTRL-B c`
   - This will execute Tmux to put you in a new Window.
 
 
+
+### Port Forwarding
+If you want to view Prefect UI, you can view the UI locally by executing the following from your Local machine in a separate terminal:
+```
+ssh -L 4200:127.0.0.1:4200 dtc
+```
+Now you can go to http://127.0.0.1:4200 to view the UI.
+Unfortunately, I had Prefect turned off in my final push to Github before submitting, so most Prefect items will not be used in this project.
+
+
+
 ## Build Program
 Execute the folowing commands
 ```
@@ -197,7 +218,7 @@ $ terraform init
 $ terraform plan
 $ terraform apply
 ```
-  - Reply 'yes'
+- REPLY: 'yes'
 
 Get into a new Tmux window:
 `CTRL-B c`
@@ -206,7 +227,10 @@ Get into a new Tmux window:
 $ cd ~/bcsales
 $ bash run_program.sh
 ```
-When program is done building, execute the folowing commands:
+
+
+## Run DBT
+When the above program (run_program.sh) is done building, execute the folowing commands:
 ```
 $ cd ~/bcsales/dbt/bcsales
 $ dbt deps
