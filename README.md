@@ -180,7 +180,7 @@ $ cd ~/bcsales
 $ tmux new -t bc
 ```
 This will start a Tmux session
-* type `CTRL-B c`
+* type `CTRL-B C`
     - That is the key (CTRL) and the key (b) pressed at the same time, let go, then press the key (c)
     - This will put you in another window.
 * Now type `CTRL-B 0`
@@ -189,13 +189,13 @@ This will start a Tmux session
 * Now type `CTRL-B 1` to go back the newer window.
     - `$ prefect orion start`
     - If you get an error: 'prefect not found': open another window:
-        * `CTRL-B c`
+        * `CTRL-B C`
         * Then run the command again: `$ prefect orion start`
 * Now type `CTRL-B %`
     - This will create a new pane in same window.
     - This will be for your Prefect Agent.
 * `$ prefect agent start -q default`
-* Now type `CTRL-B c`
+* Now type `CTRL-B C`
     - This will execute Tmux to put you in a new Window.
 
 
@@ -222,7 +222,7 @@ $ terraform apply
 - REPLY: 'yes'
 
 Get into a new Tmux window:
-`CTRL-B c`
+`CTRL-B C`
 
 ```
 $ cd ~/bcsales
