@@ -55,7 +55,7 @@ This project will answer the following questions:
                 * A float number cut from _id.
             - name: _id
                 * A long reference - the Artist name and extra identification.
-            - This column was split and the number format at the beginning was copied and used as the 'intId'.
+                    - This column was split and the number format at the beginning was copied and used as the 'intId'.
             - name: datetime
                 * IGNORE
             - name: country_code
