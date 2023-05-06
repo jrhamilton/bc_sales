@@ -10,7 +10,9 @@ This README is updated version for bcsales. This should be easier to read. I did
 
 
 ### Goal
-Goal of the project is to find the highest sales and highest average sales in each country.
+Goal of the project is to find:
+- The total sales in each country.
+- The highest sales and highest average sales in each country.
 
 
 ### Answers
@@ -43,37 +45,42 @@ This project will answer the following questions:
 
 
 ## The following describes the Dataset
-        * olumns:
-          - name: intId
-	    * A float number cut from _id.
-          - name: _id
-	    * A long reference the Artist name and extra identification.
-	      - This column was split and the number format at the beginning was copied and used as the 'intId'.
-          - name: datetime
-          - name: country_code
-          - name: ST
-          - name: IT
-          - name: item_price
-          - name: amount_paid_usd
-            * Amount paid by the customer
-          - name: art_id
-          - name: releases
-          - name: artist_name
-            * Artist name we use for our data ingestion.
-          - name: album_title
-          - name: cc_ref
-            * A iterative number given to the list of countries.
-              - We first take Distinct countries from the Dataset and then create a suparate table - country_code_ref
-                as a lookup table.
-                This `cc_ref` is used as `RANGE_BUCKET` so that we can partition based off of country.
+    - name: bcsales
+        * description: >
+            - Dataset after PySpark Transformations.
+        * columns:
+            - name: intId
+                * A float number cut from _id.
+            - name: _id
+                * A long reference the Artist name and extra identification.
+            - This column was split and the number format at the beginning was copied and used as the 'intId'.
+            - name: datetime
+            - name: country_code
+                * Two letter country code
+            - name: ST
+            - name: IT
+            - name: item_price
+            - name: amount_paid_usd
+                * Amount paid by the customer
+            - name: art_id
+            - name: releases
+            - name: artist_name
+                * Artist name we use for our data ingestion.
+            - name: album_title
+            - name: cc_ref
+                * An iterative number given to the list of countries.
+                    - We first take Distinct countries from the Dataset and then create a suparate table - country_code_ref as a lookup table.
+                    -  This `cc_ref` is used as `RANGE_BUCKET` so that we can partition based off of distinct country.
 
-      - name: country_code_ref
-        description: >
-          A Reference to the RANGE_BUCKET id (cc_ref) as a lookup for country_code.
-        columns:
-          - name: count
-          - name: contry_code
-          - name: cc_ref
+    - name: country_code_ref
+        * description: >
+            - A Reference to the RANGE_BUCKET id (cc_ref) as a lookup for country_code.
+        * columns:
+            - name: count
+            - name: contry_code
+            - name: cc_ref
+                * The country iterative id used for RANGE_BUCKET purposes. 
+
 
 ### Spark as a Data Transformation
 PySpark is used for transforming data.
