@@ -164,7 +164,7 @@ $ ssh <REMOTE-USERNAME>@X.X.X.X
 6. Then in the remote Google Cloud Instance execute the following commands:
 ```bash
 $ git clone https://github.com/jrhamilton/bcsales
-$ bash bcsales/vm/SourceMe.sh
+$ source bcsales/vm/SourceMe.sh
 ```
 
 7. Add your REMOTE INSTANCE key to Google Cloud that was made during the interactive prompts.
