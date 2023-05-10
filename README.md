@@ -194,7 +194,7 @@ Open the file spark_transform.py
 `$ nvim prefect/spark/spark_transform.py`
 Go to line 95 and remove the first second quote which is an erroneous extra single quote. Then save and exit.
 - To do this in Nvim, once you open the file:
-    * Type: `96 SHIFT+g` ~ OR better known as ~ `95 G`
+    * Type: `95 SHIFT+g` ~ OR better known as ~ `95 G`
         - (This goes to line 95)
     * Type: `e`
         - This goes to the first character which is the erroneous single quote.
