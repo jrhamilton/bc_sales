@@ -189,16 +189,17 @@ $ bash bcsales/vm/SourceMe.sh
 
 ## Bug in the Code:
 Before continuing, unfortunately, there is a mninor bug in the code that needs fixed.
+On line 95 of the spark_transform.py file, there is an extra erroneous single quote that needs to be removed.
 Open the file spark_transform.py
 `$ nvim prefect/spark/spark_transform.py`
-Go to line 95 and remove the first single quote which is an erroneous extra single quote. Then save and exit.
+Go to line 95 and remove the first second quote which is an erroneous extra single quote. Then save and exit.
 - To do this in Nvim, once you open the file:
-    * Type: `96 SHIFT+g` ~ OR better know as ~ `95 G`
+    * Type: `96 SHIFT+g` ~ OR better known as ~ `95 G`
         - (This goes to line 95)
     * Type: `e`
-        - (This goes to the first character which is the erroneous single quote)
+        - This goes to the first character which is the erroneous single quote.
     * Type: `x`
-        - (This deletes the erroneous single quote)
+        - This deletes the erroneous single quote.
     * Type: `:` 
         - A colon.
         - This puts us in a buffer.
