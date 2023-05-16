@@ -5,11 +5,6 @@
 This project is based on the 1 million Bandcamp sales dataset.
 
 
-## UPDATED README
-This README is the updated version for bcsales. This should be easier to read. I didn't know that we could update README and re-submit until the deadline.
-    - Contact me in Slack @ 'Jason H' if you have any questions.
-
-
 ### Goals
 Goals of the project are to find:
 - The total sales in each country.
